@@ -50,12 +50,23 @@
         });
     </script>
 
-    <!-- Scripts del juego -->
+    <!-- Register Service Worker (handles missing audio gracefully) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/js/sw.js', { scope: '/' })
+                .then(reg => console.log('[SW] Registered:', reg.scope))
+                .catch(err => console.warn('[SW] Registration failed:', err));
+        }
+    </script>
+
+    <!-- Scripts del juego (boot.js loads inflate.min.js → vendor.js → main.js in sequence) -->
     <script src="js/boot.js"></script>
-    <script src="/js/main.js"></script>
 
     <!-- Hand Gesture Controller (MediaPipe Hands via CDN) -->
     <script src="js/gesture_controller.js"></script>
+
+    <!-- Voice Controller (Web Speech API) -->
+    <script src="js/voice_controller.js"></script>
 </body>
 
 </html>

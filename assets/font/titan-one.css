@@ -1,6 +1,10 @@
+/* Load from Google Fonts CDN (local files are corrupt stubs) */
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
 @font-face {
     font-family: 'Titan One';
-    src: url('titan-one.woff2') format('woff2'), url('titan-one.woff') format('woff');
+    src: url('https://fonts.gstatic.com/s/titanone/v15/mFTzWbsGxbbS_J5cQcjykzIn2Etikg.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }

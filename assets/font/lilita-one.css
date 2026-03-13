@@ -1,6 +1,10 @@
+/* Load from Google Fonts CDN (local files are corrupt stubs) */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
 @font-face {
     font-family: 'Lilita One';
-    src: url('lilita-one.woff2') format('woff2'), url('lilita-one.woff') format('woff');
+    src: url('https://fonts.gstatic.com/s/lilitaone/v15/i7dPIFZ9Zz-WBtRtedDbYEF8RXi4EwQ.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
